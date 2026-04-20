@@ -1,6 +1,4 @@
-// ======================
 // SCROLL REVEAL
-// ======================
 const reveals = document.querySelectorAll(".reveal");
 
 function checkReveal() {
@@ -16,9 +14,7 @@ window.addEventListener("scroll", checkReveal);
 checkReveal();
 
 
-// ======================
-// DOWNLOAD BUTTON
-// ======================
+// DOWNLOAD
 function downloadFile() {
     const link = document.createElement("a");
     link.href = "./optimize-win11.zip";
@@ -29,32 +25,24 @@ function downloadFile() {
 }
 
 
-// ======================
-// CANVAS PARTICLES
-// ======================
+// PARTICLES
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// lepsza wydajność na mobile
 const particleCount = window.innerWidth < 768 ? 40 : 80;
 
 let particles = [];
 
-const mouse = {
-    x: null,
-    y: null
-};
+const mouse = { x: null, y: null };
 
-// mouse fix (desktop + mobile safety)
 window.addEventListener("mousemove", (e) => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
 });
 
-// resize fix
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -81,7 +69,7 @@ function animate() {
         if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
         if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
 
-        if (mouse.x !== null && mouse.y !== null) {
+        if (mouse.x && mouse.y) {
             let dx = mouse.x - p.x;
             let dy = mouse.y - p.y;
             let dist = Math.sqrt(dx * dx + dy * dy);

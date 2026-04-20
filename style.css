@@ -1,32 +1,31 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     font-family: 'Inter', sans-serif;
     background: radial-gradient(circle at top, #0f172a, #020617);
     color: white;
     overflow-x: hidden;
-    -webkit-text-size-adjust: 100%;
 }
 
 /* CANVAS */
 canvas {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* CONTAINER */
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 70px 20px;
+    padding: 70px 20px 220px 20px;
+    position: relative;
+    z-index: 2;
 }
 
 /* HERO */
@@ -102,10 +101,8 @@ p {
 .center-block {
     text-align: center;
     margin-top: 10px;
-    position: sticky;
-    bottom: 20px;
-    z-index: 10;
 }
+
 .download-btn {
     padding: 12px 28px;
     font-size: 16px;
@@ -142,38 +139,12 @@ p {
     opacity: 1;
     transform: translateY(0);
 }
-.container {
-    padding-bottom: 120px;
-}
-html, body {
-    height: auto !important;
-    min-height: 100dvh;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
 
-body {
-    position: relative;
-}
-
-.container {
-    position: relative;
-    z-index: 10;
-    padding-bottom: 220px;
-}
-
-canvas {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-}
 /* MOBILE */
 @media (max-width: 768px) {
 
     .container {
-        padding: 40px 16px;
+        padding: 40px 16px 200px 16px;
     }
 
     h1 {
