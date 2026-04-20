@@ -102,6 +102,9 @@ p {
 .center-block {
     text-align: center;
     margin-top: 10px;
+    position: sticky;
+    bottom: 20px;
+    z-index: 10;
 }
 
 .download-btn {
@@ -139,10 +142,6 @@ p {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
-}
-.center-block {
-    position: relative;
-    z-index: 10;
 }
 .container {
     padding-bottom: 120px;
