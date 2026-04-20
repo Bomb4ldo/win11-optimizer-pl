@@ -17,7 +17,7 @@ checkReveal();
 // DOWNLOAD
 function downloadFile() {
     const link = document.createElement("a");
-    link.href = "./optimize-win11.zip";
+    link.href = "./Win11_Optimizer.zip";
     link.download = "Win11_Optimizer.zip";
     document.body.appendChild(link);
     link.click();
