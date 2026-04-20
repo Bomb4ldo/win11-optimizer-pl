@@ -140,7 +140,13 @@ p {
     opacity: 1;
     transform: translateY(0);
 }
-
+.center-block {
+    position: relative;
+    z-index: 10;
+}
+.container {
+    padding-bottom: 120px;
+}
 /* MOBILE */
 @media (max-width: 768px) {
 
