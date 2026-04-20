@@ -106,7 +106,6 @@ p {
     bottom: 20px;
     z-index: 10;
 }
-
 .download-btn {
     padding: 12px 28px;
     font-size: 16px;
@@ -169,11 +168,6 @@ canvas {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-}
-.download-btn {
-    display: block !important;
-    border: 5px solid red !important;
-    margin-top: 40px !important;
 }
 /* MOBILE */
 @media (max-width: 768px) {
